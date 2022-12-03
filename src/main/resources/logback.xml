@@ -1,0 +1,21 @@
+<configuration>
+
+
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.ConsoleAppender">
+        <file>${HOME_LOG}</file>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="error">
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+    <root level="info">
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+</configuration>
